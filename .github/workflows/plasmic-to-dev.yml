@@ -4,9 +4,9 @@ name: Sync, build and deploy Plasmic app in development in Netlify
 permissions:
   contents: write
 
-# on:
-#   repository_dispatch:
-#     types: [plasmic-to-dev]
+on:
+  repository_dispatch:
+    types: [plasmic-to-dev]
 
 on:
   workflow_dispatch:
