@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Echo payload
         run: |
-          echo Hello ${{ toJSON(github.event.client_payload) }}
+          echo Hello ${{ toJSON(github.event) }}
 
       - id: checkout
         name: Checking out repository...
