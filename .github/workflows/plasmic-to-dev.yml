@@ -1,5 +1,5 @@
 # Plasmic workflow v3
-name: Sync, build and deploy Plasmic app in development
+name: Sync, build and deploy Plasmic app in development in Netlify
 
 permissions:
   contents: write
@@ -20,7 +20,7 @@ jobs:
     steps:
       - name: Echo payload
         run: |
-          echo Hello ${{ github.event.client_payload }}
+          echo Hello ${{ toJSON(github.event.client_payload) }}
 
       - id: checkout
         name: Checking out repository...
