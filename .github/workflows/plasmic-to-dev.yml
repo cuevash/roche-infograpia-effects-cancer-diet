@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Echo payload
         run: |
-          echo Hello ${{ toJSON(github.event) }}
+          echo 'Hello ${{ toJSON(job) }}'
 
       - id: checkout
         name: Checking out repository...
