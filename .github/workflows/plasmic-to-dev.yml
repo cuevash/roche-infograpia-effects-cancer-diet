@@ -4,9 +4,12 @@ name: Sync, build and deploy Plasmic app in development
 permissions:
   contents: write
 
+# on:
+#   repository_dispatch:
+#     types: [plasmic-to-dev]
+
 on:
-  repository_dispatch:
-    types: [plasmic-to-dev]
+  workflow_dispatch:
 
 jobs:
   job:
@@ -15,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Echo payload
+        run: |
+          echo Hello ${{ github.event.client_payload }}
+
       - id: checkout
         name: Checking out repository...
         uses: actions/checkout@v3
