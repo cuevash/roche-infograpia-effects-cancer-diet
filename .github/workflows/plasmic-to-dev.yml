@@ -8,9 +8,6 @@ on:
   repository_dispatch:
     types: [plasmic-to-dev]
 
-on:
-  workflow_dispatch:
-
 jobs:
   job:
     name: Sync, build and deploy
