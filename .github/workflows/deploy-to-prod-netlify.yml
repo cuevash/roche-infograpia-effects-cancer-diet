@@ -10,14 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - id: checkout
-        name: Checking out repository...
-        uses: actions/checkout@v3
-
-      - name: Publish
-        uses: netlify/actions/build@master
+      - name: Trigger Netlify Build Hook
+        run: curl -X POST -d {} "https://api.netlify.com/build_hooks/${TOKEN}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_CMD: yarn build
-          NETLIFY_DIR: ./build
+          TOKEN: ${{ secrets.NETLIFY_BUILD_HOOK_TOKEN }}
