@@ -25,4 +25,13 @@ function Homepage() {
   return <PlasmicHomepage />;
 }
 
-export default Homepage;
+function Root() {
+  return (
+    <div>
+      <h1>ONE MORE</h1>
+      <Homepage />
+    </div>
+  );
+}
+
+export default Root;
