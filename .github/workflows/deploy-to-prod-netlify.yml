@@ -1,4 +1,4 @@
-# Deploy to Netlify
+# Deploy to Netlify Prod
 name: Trigger production deployment in Netlify
 
 on: workflow_dispatch
