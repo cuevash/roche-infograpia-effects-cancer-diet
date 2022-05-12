@@ -1,4 +1,4 @@
-# Plasmic workflow v3
+# Deploy to Netlify
 name: Trigger production deployment in Netlify
 
 on: workflow_dispatch
