@@ -120,7 +120,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text___9DMnu
                     )}
                   >
-                    {"Anna Wu"}
+                    {"Anna Wu2"}
                   </div>
 
                   <div
