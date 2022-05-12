@@ -43,7 +43,7 @@ jobs:
           platform: ${{ github.event.client_payload.data.platform }}
           language: ${{ github.event.client_payload.data.language }}
           scheme: ${{ github.event.client_payload.data.scheme }}
-          title: ${{ format('{0} {1}', github.event.client_payload.data.title, '[skip netlify]') }}
+          title: ${{ github.event.client_payload.data.title }}
           description: ${{ github.event.client_payload.data.description }}
       - id: sync
         name: Syncing Plasmic project...
@@ -57,7 +57,7 @@ jobs:
           project_id: ${{ github.event.client_payload.data.projectId }}
           project_api_token: ${{ github.event.client_payload.data.projectApiToken }}
           sync_action: ${{ github.event.client_payload.data.syncAction }}
-          title: ${{ format('{0} {1}', github.event.client_payload.data.title, '[skip netlify]') }}
+          title: ${{ github.event.client_payload.data.title }}
           description: ${{ github.event.client_payload.data.description }}
       - id: build
         name: Building Plasmic app...
