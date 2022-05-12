@@ -24,7 +24,7 @@
     {
       "projectId": "2kS349DKMK4UC7Q38aQg2a",
       "projectApiToken": "xuIWfnHx7V5uN3gcr4ld7bZR1MyrVvp3O4lSdh6aFL9ywEMIsxRT8ydba0Jt1hCQQTCv8jLoZwnugAuxjxuA",
-      "projectName": "Minimalist about-me page",
+      "projectName": "Minimalist about-me page [skip netlify]",
       "version": "latest",
       "cssFilePath": "plasmic/minimalist_about_me_page/plasmic_minimalist_about_me_page.module.css",
       "components": [
