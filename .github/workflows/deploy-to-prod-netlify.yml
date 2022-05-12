@@ -1,0 +1,23 @@
+# Plasmic workflow v3
+name: Trigger production deployment in Netlify
+
+on: workflow_dispatch
+
+jobs:
+  job:
+    name: (Job) Trigger production deployment in Netlify
+    environment: production
+    runs-on: ubuntu-latest
+
+    steps:
+      - id: checkout
+        name: Checking out repository...
+        uses: actions/checkout@v3
+
+      - name: Publish
+        uses: netlify/actions/build@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_CMD: npm build
+          NETLIFY_DIR: ./_build
